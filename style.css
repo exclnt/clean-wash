@@ -11,6 +11,7 @@ header {
   width: 100%;
   background-color: rgba(73, 177, 200, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
 }
 
 .nav {
@@ -48,7 +49,18 @@ header {
 }
 
 .hero {
-  background: linear-gradient(to right, rgb(181, 241, 235), #f0fdf4);
+  position: relative;
+  background:
+    linear-gradient(
+      to right,
+      rgba(181, 241, 235, 0.8),
+      rgba(240, 253, 244, 0.8)
+    ),
+    url("waduh.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   padding: 140px 0 80px 0;
   height: 100%;
 }
@@ -198,7 +210,6 @@ header {
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -223,4 +234,73 @@ header {
 .btn-outline:hover {
   background-color: #49b1c8;
   color: white;
+}
+
+.page-container {
+  padding: 120px 10% 60px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #49b1c8;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #49b1c8;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+iconify-icon {
+  font-size: 3rem;
+  color: #49b1c8;
+}
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #49b1c8;
+}
+
+.scroll-down iconify-icon {
+  font-size: 3rem;
 }
